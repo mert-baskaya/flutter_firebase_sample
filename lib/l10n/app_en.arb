@@ -1,0 +1,538 @@
+{
+  "@@locale": "en",
+  
+  "appTitle": "Firebase Auth Demo",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+
+  "welcomeBack": "Welcome Back",
+  "@welcomeBack": {
+    "description": "Welcome back message on login page"
+  },
+
+  "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Create account header on registration"
+  },
+
+  "email": "Email",
+  "@email": {
+    "description": "Email field label"
+  },
+
+  "password": "Password",
+  "@password": {
+    "description": "Password field label"
+  },
+
+  "pleaseEnterEmail": "Please enter your email",
+  "@pleaseEnterEmail": {
+    "description": "Email validation error"
+  },
+
+  "pleaseEnterValidEmail": "Please enter a valid email",
+  "@pleaseEnterValidEmail": {
+    "description": "Email format validation error"
+  },
+
+  "pleaseEnterPassword": "Please enter your password",
+  "@pleaseEnterPassword": {
+    "description": "Password validation error"
+  },
+
+  "passwordMinLength": "Password must be at least 6 characters",
+  "@passwordMinLength": {
+    "description": "Password length validation error"
+  },
+
+  "signIn": "Sign In",
+  "@signIn": {
+    "description": "Sign in button text"
+  },
+
+  "signUp": "Sign Up",
+  "@signUp": {
+    "description": "Sign up button text"
+  },
+
+  "or": "OR",
+  "@or": {
+    "description": "Divider text between authentication methods"
+  },
+
+  "continueWithGoogle": "Continue with Google",
+  "@continueWithGoogle": {
+    "description": "Google sign-in button text"
+  },
+
+  "dontHaveAccount": "Don't have an account? Sign Up",
+  "@dontHaveAccount": {
+    "description": "Text to switch to registration"
+  },
+
+  "alreadyHaveAccount": "Already have an account? Sign In",
+  "@alreadyHaveAccount": {
+    "description": "Text to switch to login"
+  },
+
+  "home": "Home",
+  "@home": {
+    "description": "Home page title and navigation label"
+  },
+
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile page title and navigation label"
+  },
+
+  "welcome": "Welcome!",
+  "@welcome": {
+    "description": "Welcome message on home page"
+  },
+
+  "noEmail": "No email",
+  "@noEmail": {
+    "description": "Fallback text when user has no email"
+  },
+
+  "emailVerified": "Email Verified",
+  "@emailVerified": {
+    "description": "Email verification status label"
+  },
+
+  "yes": "Yes",
+  "@yes": {
+    "description": "Yes answer"
+  },
+
+  "no": "No",
+  "@no": {
+    "description": "No answer"
+  },
+
+  "accountCreated": "Account Created",
+  "@accountCreated": {
+    "description": "Account creation date label"
+  },
+
+  "unknown": "Unknown",
+  "@unknown": {
+    "description": "Fallback for unknown values"
+  },
+
+  "lastSignIn": "Last Sign In",
+  "@lastSignIn": {
+    "description": "Last sign-in time label"
+  },
+
+  "signOut": "Sign Out",
+  "@signOut": {
+    "description": "Sign out button text"
+  },
+
+  "diet": "Diet",
+  "@diet": {
+    "description": "Diet navigation label and page title"
+  },
+
+  "exercise": "Exercise",
+  "@exercise": {
+    "description": "Exercise navigation label and page title"
+  },
+
+  "progress": "Progress",
+  "@progress": {
+    "description": "Progress navigation label and page title"
+  },
+
+  "dietPage": "Diet Page",
+  "@dietPage": {
+    "description": "Diet page content"
+  },
+
+  "exercisePage": "Exercise Page",
+  "@exercisePage": {
+    "description": "Exercise page content"
+  },
+
+  "progressPage": "Progress Page",
+  "@progressPage": {
+    "description": "Progress page content"
+  },
+
+  "completeYourProfile": "Complete Your Profile",
+  "@completeYourProfile": {
+    "description": "Onboarding page title"
+  },
+
+  "skip": "Skip",
+  "@skip": {
+    "description": "Skip button text"
+  },
+
+  "back": "Back",
+  "@back": {
+    "description": "Back button text"
+  },
+
+  "next": "Next",
+  "@next": {
+    "description": "Next button text"
+  },
+
+  "complete": "Complete",
+  "@complete": {
+    "description": "Complete button text"
+  },
+
+  "howOldAreYou": "How old are you?",
+  "@howOldAreYou": {
+    "description": "Age question in onboarding"
+  },
+
+  "age": "Age",
+  "@age": {
+    "description": "Age label"
+  },
+
+  "enterYourAge": "Enter your age",
+  "@enterYourAge": {
+    "description": "Age field hint"
+  },
+
+  "years": "years",
+  "@years": {
+    "description": "Years unit"
+  },
+
+  "pleaseEnterAge": "Please enter your age",
+  "@pleaseEnterAge": {
+    "description": "Age validation error"
+  },
+
+  "pleaseEnterValidNumber": "Please enter a valid number",
+  "@pleaseEnterValidNumber": {
+    "description": "Number validation error"
+  },
+
+  "mustBeAtLeast18": "You must be at least 18 years old",
+  "@mustBeAtLeast18": {
+    "description": "Age minimum validation error"
+  },
+
+  "pleaseEnterValidAge": "Please enter a valid age",
+  "@pleaseEnterValidAge": {
+    "description": "Age range validation error"
+  },
+
+  "whatIsYourHeight": "What is your height?",
+  "@whatIsYourHeight": {
+    "description": "Height question in onboarding"
+  },
+
+  "height": "Height",
+  "@height": {
+    "description": "Height label"
+  },
+
+  "enterYourHeight": "Enter your height",
+  "@enterYourHeight": {
+    "description": "Height field hint"
+  },
+
+  "cm": "cm",
+  "@cm": {
+    "description": "Centimeters unit"
+  },
+
+  "pleaseEnterHeight": "Please enter your height",
+  "@pleaseEnterHeight": {
+    "description": "Height validation error"
+  },
+
+  "heightMinimum": "Height must be at least 50 cm",
+  "@heightMinimum": {
+    "description": "Height minimum validation error"
+  },
+
+  "heightMaximum": "Height must be less than 300 cm",
+  "@heightMaximum": {
+    "description": "Height maximum validation error"
+  },
+
+  "whatIsYourWeight": "What is your weight?",
+  "@whatIsYourWeight": {
+    "description": "Weight question in onboarding"
+  },
+
+  "weight": "Weight",
+  "@weight": {
+    "description": "Weight label"
+  },
+
+  "enterYourWeight": "Enter your weight",
+  "@enterYourWeight": {
+    "description": "Weight field hint"
+  },
+
+  "kg": "kg",
+  "@kg": {
+    "description": "Kilograms unit"
+  },
+
+  "pleaseEnterWeight": "Please enter your weight",
+  "@pleaseEnterWeight": {
+    "description": "Weight validation error"
+  },
+
+  "weightMinimum": "Weight must be at least 20 kg",
+  "@weightMinimum": {
+    "description": "Weight minimum validation error"
+  },
+
+  "weightMaximum": "Weight must be less than 500 kg",
+  "@weightMaximum": {
+    "description": "Weight maximum validation error"
+  },
+
+  "whatIsYourGender": "What is your gender?",
+  "@whatIsYourGender": {
+    "description": "Gender question in onboarding"
+  },
+
+  "male": "Male",
+  "@male": {
+    "description": "Male gender option"
+  },
+
+  "female": "Female",
+  "@female": {
+    "description": "Female gender option"
+  },
+
+  "gender": "Gender",
+  "@gender": {
+    "description": "Gender label"
+  },
+
+  "profilePictureUpdated": "Profile picture updated!",
+  "@profilePictureUpdated": {
+    "description": "Success message for profile picture upload"
+  },
+
+  "error": "Error",
+  "@error": {
+    "description": "Error prefix"
+  },
+
+  "verificationEmailSent": "Verification email sent! Please check your inbox.",
+  "@verificationEmailSent": {
+    "description": "Email verification sent message"
+  },
+
+  "emailVerifiedSuccessfully": "Email verified successfully!",
+  "@emailVerifiedSuccessfully": {
+    "description": "Email verified success message"
+  },
+
+  "emailNotVerifiedYet": "Email not verified yet. Please check your inbox.",
+  "@emailNotVerifiedYet": {
+    "description": "Email not yet verified message"
+  },
+
+  "editProfile": "Edit Profile",
+  "@editProfile": {
+    "description": "Edit profile button and dialog title"
+  },
+
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+
+  "save": "Save",
+  "@save": {
+    "description": "Save button text"
+  },
+
+  "profileUpdatedSuccessfully": "Profile updated successfully!",
+  "@profileUpdatedSuccessfully": {
+    "description": "Profile update success message"
+  },
+
+  "noUserLoggedIn": "No user logged in",
+  "@noUserLoggedIn": {
+    "description": "No user error message"
+  },
+
+  "noProfileDataAvailable": "No profile data available",
+  "@noProfileDataAvailable": {
+    "description": "No profile data message"
+  },
+
+  "profileIncomplete": "Profile Incomplete",
+  "@profileIncomplete": {
+    "description": "Profile incomplete banner title"
+  },
+
+  "completeProfileMessage": "Complete your profile to get personalized recommendations",
+  "@completeProfileMessage": {
+    "description": "Profile incomplete banner message"
+  },
+
+  "completeProfileNow": "Complete Profile Now",
+  "@completeProfileNow": {
+    "description": "Complete profile button text"
+  },
+
+  "notSet": "Not set",
+  "@notSet": {
+    "description": "Not set placeholder text"
+  },
+
+  "checkVerificationStatus": "Check verification status",
+  "@checkVerificationStatus": {
+    "description": "Tooltip for verification check button"
+  },
+
+  "verify": "Verify",
+  "@verify": {
+    "description": "Verify button text"
+  },
+
+  "language": "Language",
+  "@language": {
+    "description": "Language setting label"
+  },
+
+  "english": "English",
+  "@english": {
+    "description": "English language option"
+  },
+
+  "turkish": "Turkish",
+  "@turkish": {
+    "description": "Turkish language option"
+  },
+
+  "changeProfilePicture": "Change Profile Picture",
+  "@changeProfilePicture": {
+    "description": "Action sheet title for changing profile picture"
+  },
+
+  "takePhoto": "Take Photo",
+  "@takePhoto": {
+    "description": "Camera option in image source picker"
+  },
+
+  "chooseFromGallery": "Choose from Gallery",
+  "@chooseFromGallery": {
+    "description": "Gallery option in image source picker"
+  },
+
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings page title and navigation label"
+  },
+
+  "appLock": "App Lock",
+  "@appLock": {
+    "description": "App lock setting label"
+  },
+
+  "appLockDescription": "Require PIN to unlock the app",
+  "@appLockDescription": {
+    "description": "App lock setting description"
+  },
+
+  "lockTimeout": "Lock Timeout",
+  "@lockTimeout": {
+    "description": "Lock timeout setting label"
+  },
+
+  "lockTimeoutImmediate": "Immediate",
+  "@lockTimeoutImmediate": {
+    "description": "Lock timeout immediate option"
+  },
+
+  "lockTimeout30s": "30 seconds",
+  "@lockTimeout30s": {
+    "description": "Lock timeout 30 seconds option"
+  },
+
+  "lockTimeout1min": "1 minute",
+  "@lockTimeout1min": {
+    "description": "Lock timeout 1 minute option"
+  },
+
+  "lockTimeout5min": "5 minutes",
+  "@lockTimeout5min": {
+    "description": "Lock timeout 5 minutes option"
+  },
+
+  "lockTimeout15min": "15 minutes",
+  "@lockTimeout15min": {
+    "description": "Lock timeout 15 minutes option"
+  },
+
+  "changePin": "Change PIN",
+  "@changePin": {
+    "description": "Change PIN setting label"
+  },
+
+  "changePinDescription": "Update your 4-digit PIN",
+  "@changePinDescription": {
+    "description": "Change PIN setting description"
+  },
+
+  "biometrics": "Biometrics",
+  "@biometrics": {
+    "description": "Biometrics setting label"
+  },
+
+  "biometricsDescription": "Use Face ID / Touch ID",
+  "@biometricsDescription": {
+    "description": "Biometrics setting description"
+  },
+
+  "setPin": "Set PIN",
+  "@setPin": {
+    "description": "Set PIN dialog title"
+  },
+
+  "enterPin": "Enter PIN",
+  "@enterPin": {
+    "description": "Enter PIN placeholder"
+  },
+
+  "enter4DigitPin": "Enter 4-digit PIN",
+  "@enter4DigitPin": {
+    "description": "Enter 4-digit PIN placeholder"
+  },
+
+  "pinMustBe4Digits": "PIN must be 4 digits",
+  "@pinMustBe4Digits": {
+    "description": "PIN validation error"
+  },
+
+  "incorrectPin": "Incorrect PIN",
+  "@incorrectPin": {
+    "description": "Incorrect PIN error message"
+  },
+
+  "pinUpdated": "PIN updated",
+  "@pinUpdated": {
+    "description": "PIN update success message"
+  },
+
+  "authenticateToUnlock": "Authenticate to unlock the app",
+  "@authenticateToUnlock": {
+    "description": "Biometric authentication reason"
+  },
+
+  "lockSettingsDescription": "Lock the app after a period of inactivity. When enabled, you will be asked to enter your PIN or use biometrics to unlock the app.",
+  "@lockSettingsDescription": {
+    "description": "Lock settings section description"
+  }
+}

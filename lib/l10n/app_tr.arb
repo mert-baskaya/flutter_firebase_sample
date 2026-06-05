@@ -1,0 +1,538 @@
+{
+  "@@locale": "tr",
+  
+  "appTitle": "Firebase Kimlik Doğrulama Demo",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+
+  "welcomeBack": "Tekrar Hoş Geldiniz",
+  "@welcomeBack": {
+    "description": "Welcome back message on login page"
+  },
+
+  "createAccount": "Hesap Oluştur",
+  "@createAccount": {
+    "description": "Create account header on registration"
+  },
+
+  "email": "E-posta",
+  "@email": {
+    "description": "Email field label"
+  },
+
+  "password": "Şifre",
+  "@password": {
+    "description": "Password field label"
+  },
+
+  "pleaseEnterEmail": "Lütfen e-posta adresinizi girin",
+  "@pleaseEnterEmail": {
+    "description": "Email validation error"
+  },
+
+  "pleaseEnterValidEmail": "Lütfen geçerli bir e-posta adresi girin",
+  "@pleaseEnterValidEmail": {
+    "description": "Email format validation error"
+  },
+
+  "pleaseEnterPassword": "Lütfen şifrenizi girin",
+  "@pleaseEnterPassword": {
+    "description": "Password validation error"
+  },
+
+  "passwordMinLength": "Şifre en az 6 karakter olmalıdır",
+  "@passwordMinLength": {
+    "description": "Password length validation error"
+  },
+
+  "signIn": "Giriş Yap",
+  "@signIn": {
+    "description": "Sign in button text"
+  },
+
+  "signUp": "Kayıt Ol",
+  "@signUp": {
+    "description": "Sign up button text"
+  },
+
+  "or": "VEYA",
+  "@or": {
+    "description": "Divider text between authentication methods"
+  },
+
+  "continueWithGoogle": "Google ile Devam Et",
+  "@continueWithGoogle": {
+    "description": "Google sign-in button text"
+  },
+
+  "dontHaveAccount": "Hesabınız yok mu? Kayıt Olun",
+  "@dontHaveAccount": {
+    "description": "Text to switch to registration"
+  },
+
+  "alreadyHaveAccount": "Zaten hesabınız var mı? Giriş Yapın",
+  "@alreadyHaveAccount": {
+    "description": "Text to switch to login"
+  },
+
+  "home": "Ana Sayfa",
+  "@home": {
+    "description": "Home page title and navigation label"
+  },
+
+  "profile": "Profil",
+  "@profile": {
+    "description": "Profile page title and navigation label"
+  },
+
+  "welcome": "Hoş Geldiniz!",
+  "@welcome": {
+    "description": "Welcome message on home page"
+  },
+
+  "noEmail": "E-posta yok",
+  "@noEmail": {
+    "description": "Fallback text when user has no email"
+  },
+
+  "emailVerified": "E-posta Doğrulandı",
+  "@emailVerified": {
+    "description": "Email verification status label"
+  },
+
+  "yes": "Evet",
+  "@yes": {
+    "description": "Yes answer"
+  },
+
+  "no": "Hayır",
+  "@no": {
+    "description": "No answer"
+  },
+
+  "accountCreated": "Hesap Oluşturulma Tarihi",
+  "@accountCreated": {
+    "description": "Account creation date label"
+  },
+
+  "unknown": "Bilinmiyor",
+  "@unknown": {
+    "description": "Fallback for unknown values"
+  },
+
+  "lastSignIn": "Son Giriş",
+  "@lastSignIn": {
+    "description": "Last sign-in time label"
+  },
+
+  "signOut": "Çıkış Yap",
+  "@signOut": {
+    "description": "Sign out button text"
+  },
+
+  "diet": "Diyet",
+  "@diet": {
+    "description": "Diet navigation label and page title"
+  },
+
+  "exercise": "Egzersiz",
+  "@exercise": {
+    "description": "Exercise navigation label and page title"
+  },
+
+  "progress": "İlerleme",
+  "@progress": {
+    "description": "Progress navigation label and page title"
+  },
+
+  "dietPage": "Diyet Sayfası",
+  "@dietPage": {
+    "description": "Diet page content"
+  },
+
+  "exercisePage": "Egzersiz Sayfası",
+  "@exercisePage": {
+    "description": "Exercise page content"
+  },
+
+  "progressPage": "İlerleme Sayfası",
+  "@progressPage": {
+    "description": "Progress page content"
+  },
+
+  "completeYourProfile": "Profilinizi Tamamlayın",
+  "@completeYourProfile": {
+    "description": "Onboarding page title"
+  },
+
+  "skip": "Atla",
+  "@skip": {
+    "description": "Skip button text"
+  },
+
+  "back": "Geri",
+  "@back": {
+    "description": "Back button text"
+  },
+
+  "next": "İleri",
+  "@next": {
+    "description": "Next button text"
+  },
+
+  "complete": "Tamamla",
+  "@complete": {
+    "description": "Complete button text"
+  },
+
+  "howOldAreYou": "Kaç yaşındasınız?",
+  "@howOldAreYou": {
+    "description": "Age question in onboarding"
+  },
+
+  "age": "Yaş",
+  "@age": {
+    "description": "Age label"
+  },
+
+  "enterYourAge": "Yaşınızı girin",
+  "@enterYourAge": {
+    "description": "Age field hint"
+  },
+
+  "years": "yıl",
+  "@years": {
+    "description": "Years unit"
+  },
+
+  "pleaseEnterAge": "Lütfen yaşınızı girin",
+  "@pleaseEnterAge": {
+    "description": "Age validation error"
+  },
+
+  "pleaseEnterValidNumber": "Lütfen geçerli bir sayı girin",
+  "@pleaseEnterValidNumber": {
+    "description": "Number validation error"
+  },
+
+  "mustBeAtLeast18": "En az 18 yaşında olmalısınız",
+  "@mustBeAtLeast18": {
+    "description": "Age minimum validation error"
+  },
+
+  "pleaseEnterValidAge": "Lütfen geçerli bir yaş girin",
+  "@pleaseEnterValidAge": {
+    "description": "Age range validation error"
+  },
+
+  "whatIsYourHeight": "Boyunuz kaç?",
+  "@whatIsYourHeight": {
+    "description": "Height question in onboarding"
+  },
+
+  "height": "Boy",
+  "@height": {
+    "description": "Height label"
+  },
+
+  "enterYourHeight": "Boyunuzu girin",
+  "@enterYourHeight": {
+    "description": "Height field hint"
+  },
+
+  "cm": "cm",
+  "@cm": {
+    "description": "Centimeters unit"
+  },
+
+  "pleaseEnterHeight": "Lütfen boyunuzu girin",
+  "@pleaseEnterHeight": {
+    "description": "Height validation error"
+  },
+
+  "heightMinimum": "Boy en az 50 cm olmalıdır",
+  "@heightMinimum": {
+    "description": "Height minimum validation error"
+  },
+
+  "heightMaximum": "Boy 300 cm'den az olmalıdır",
+  "@heightMaximum": {
+    "description": "Height maximum validation error"
+  },
+
+  "whatIsYourWeight": "Kilonuz kaç?",
+  "@whatIsYourWeight": {
+    "description": "Weight question in onboarding"
+  },
+
+  "weight": "Kilo",
+  "@weight": {
+    "description": "Weight label"
+  },
+
+  "enterYourWeight": "Kilonuzu girin",
+  "@enterYourWeight": {
+    "description": "Weight field hint"
+  },
+
+  "kg": "kg",
+  "@kg": {
+    "description": "Kilograms unit"
+  },
+
+  "pleaseEnterWeight": "Lütfen kilonuzu girin",
+  "@pleaseEnterWeight": {
+    "description": "Weight validation error"
+  },
+
+  "weightMinimum": "Kilo en az 20 kg olmalıdır",
+  "@weightMinimum": {
+    "description": "Weight minimum validation error"
+  },
+
+  "weightMaximum": "Kilo 500 kg'dan az olmalıdır",
+  "@weightMaximum": {
+    "description": "Weight maximum validation error"
+  },
+
+  "whatIsYourGender": "Cinsiyetiniz nedir?",
+  "@whatIsYourGender": {
+    "description": "Gender question in onboarding"
+  },
+
+  "male": "Erkek",
+  "@male": {
+    "description": "Male gender option"
+  },
+
+  "female": "Kadın",
+  "@female": {
+    "description": "Female gender option"
+  },
+
+  "gender": "Cinsiyet",
+  "@gender": {
+    "description": "Gender label"
+  },
+
+  "profilePictureUpdated": "Profil resmi güncellendi!",
+  "@profilePictureUpdated": {
+    "description": "Success message for profile picture upload"
+  },
+
+  "error": "Hata",
+  "@error": {
+    "description": "Error prefix"
+  },
+
+  "verificationEmailSent": "Doğrulama e-postası gönderildi! Lütfen gelen kutunuzu kontrol edin.",
+  "@verificationEmailSent": {
+    "description": "Email verification sent message"
+  },
+
+  "emailVerifiedSuccessfully": "E-posta başarıyla doğrulandı!",
+  "@emailVerifiedSuccessfully": {
+    "description": "Email verified success message"
+  },
+
+  "emailNotVerifiedYet": "E-posta henüz doğrulanmadı. Lütfen gelen kutunuzu kontrol edin.",
+  "@emailNotVerifiedYet": {
+    "description": "Email not yet verified message"
+  },
+
+  "editProfile": "Profili Düzenle",
+  "@editProfile": {
+    "description": "Edit profile button and dialog title"
+  },
+
+  "cancel": "İptal",
+  "@cancel": {
+    "description": "Cancel button text"
+  },
+
+  "save": "Kaydet",
+  "@save": {
+    "description": "Save button text"
+  },
+
+  "profileUpdatedSuccessfully": "Profil başarıyla güncellendi!",
+  "@profileUpdatedSuccessfully": {
+    "description": "Profile update success message"
+  },
+
+  "noUserLoggedIn": "Oturum açmış kullanıcı yok",
+  "@noUserLoggedIn": {
+    "description": "No user error message"
+  },
+
+  "noProfileDataAvailable": "Profil verisi mevcut değil",
+  "@noProfileDataAvailable": {
+    "description": "No profile data message"
+  },
+
+  "profileIncomplete": "Profil Eksik",
+  "@profileIncomplete": {
+    "description": "Profile incomplete banner title"
+  },
+
+  "completeProfileMessage": "Kişiselleştirilmiş öneriler almak için profilinizi tamamlayın",
+  "@completeProfileMessage": {
+    "description": "Profile incomplete banner message"
+  },
+
+  "completeProfileNow": "Profili Şimdi Tamamla",
+  "@completeProfileNow": {
+    "description": "Complete profile button text"
+  },
+
+  "notSet": "Ayarlanmadı",
+  "@notSet": {
+    "description": "Not set placeholder text"
+  },
+
+  "checkVerificationStatus": "Doğrulama durumunu kontrol et",
+  "@checkVerificationStatus": {
+    "description": "Tooltip for verification check button"
+  },
+
+  "verify": "Doğrula",
+  "@verify": {
+    "description": "Verify button text"
+  },
+
+  "language": "Dil",
+  "@language": {
+    "description": "Language setting label"
+  },
+
+  "english": "İngilizce",
+  "@english": {
+    "description": "English language option"
+  },
+
+  "turkish": "Türkçe",
+  "@turkish": {
+    "description": "Turkish language option"
+  },
+
+  "changeProfilePicture": "Profil Fotoğrafını Değiştir",
+  "@changeProfilePicture": {
+    "description": "Action sheet title for changing profile picture"
+  },
+
+  "takePhoto": "Fotoğraf Çek",
+  "@takePhoto": {
+    "description": "Camera option in image source picker"
+  },
+
+  "chooseFromGallery": "Galeriden Seç",
+  "@chooseFromGallery": {
+    "description": "Gallery option in image source picker"
+  },
+
+  "settings": "Ayarlar",
+  "@settings": {
+    "description": "Settings page title and navigation label"
+  },
+
+  "appLock": "Uygulama Kilidi",
+  "@appLock": {
+    "description": "App lock setting label"
+  },
+
+  "appLockDescription": "Uygulamayı açmak için PIN gerektir",
+  "@appLockDescription": {
+    "description": "App lock setting description"
+  },
+
+  "lockTimeout": "Kilit Zaman Aşımı",
+  "@lockTimeout": {
+    "description": "Lock timeout setting label"
+  },
+
+  "lockTimeoutImmediate": "Hemen",
+  "@lockTimeoutImmediate": {
+    "description": "Lock timeout immediate option"
+  },
+
+  "lockTimeout30s": "30 saniye",
+  "@lockTimeout30s": {
+    "description": "Lock timeout 30 seconds option"
+  },
+
+  "lockTimeout1min": "1 dakika",
+  "@lockTimeout1min": {
+    "description": "Lock timeout 1 minute option"
+  },
+
+  "lockTimeout5min": "5 dakika",
+  "@lockTimeout5min": {
+    "description": "Lock timeout 5 minutes option"
+  },
+
+  "lockTimeout15min": "15 dakika",
+  "@lockTimeout15min": {
+    "description": "Lock timeout 15 minutes option"
+  },
+
+  "changePin": "PIN Değiştir",
+  "@changePin": {
+    "description": "Change PIN setting label"
+  },
+
+  "changePinDescription": "4 haneli PIN'inizi güncelleyin",
+  "@changePinDescription": {
+    "description": "Change PIN setting description"
+  },
+
+  "biometrics": "Biyometri",
+  "@biometrics": {
+    "description": "Biometrics setting label"
+  },
+
+  "biometricsDescription": "Face ID / Touch ID kullan",
+  "@biometricsDescription": {
+    "description": "Biometrics setting description"
+  },
+
+  "setPin": "PIN Belirle",
+  "@setPin": {
+    "description": "Set PIN dialog title"
+  },
+
+  "enterPin": "PIN Girin",
+  "@enterPin": {
+    "description": "Enter PIN placeholder"
+  },
+
+  "enter4DigitPin": "4 haneli PIN girin",
+  "@enter4DigitPin": {
+    "description": "Enter 4-digit PIN placeholder"
+  },
+
+  "pinMustBe4Digits": "PIN 4 haneli olmalıdır",
+  "@pinMustBe4Digits": {
+    "description": "PIN validation error"
+  },
+
+  "incorrectPin": "Yanlış PIN",
+  "@incorrectPin": {
+    "description": "Incorrect PIN error message"
+  },
+
+  "pinUpdated": "PIN güncellendi",
+  "@pinUpdated": {
+    "description": "PIN update success message"
+  },
+
+  "authenticateToUnlock": "Uygulamanın kilidini açmak için kimlik doğrulaması yapın",
+  "@authenticateToUnlock": {
+    "description": "Biometric authentication reason"
+  },
+
+  "lockSettingsDescription": "Uygulamayı belirli bir süre işlem yapılmadığında kilitleyin. Etkinleştirildiğinde, uygulamayı açmak için PIN girmeniz veya biyometri kullanmanız istenecektir.",
+  "@lockSettingsDescription": {
+    "description": "Lock settings section description"
+  }
+}
