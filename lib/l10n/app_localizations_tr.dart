@@ -333,4 +333,36 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get lockSettingsDescription =>
       'Uygulamayı belirli bir süre işlem yapılmadığında kilitleyin. Etkinleştirildiğinde, uygulamayı açmak için PIN girmeniz veya biyometri kullanmanız istenecektir.';
+
+  @override
+  String get ok => 'Tamam';
+
+  @override
+  String get biometricUnavailable => 'Biyometri Kullanılamıyor';
+
+  @override
+  String biometricSetupInstructions(String type) {
+    return 'Biyometrik kimlik doğrulama kullanılamıyor veya bu cihazda kayıtlı değil. Lütfen cihaz ayarlarınızdan $type özelliğini kurun.';
+  }
+
+  @override
+  String get biometricsNotAvailable => 'Bu cihazda kullanılamıyor';
+
+  @override
+  String useBiometric(String type) {
+    return '$type kullan';
+  }
+
+  @override
+  String get forgotPin => 'PIN\'imi Unuttum?';
+
+  @override
+  String get forgotPinMessage =>
+      'PIN\'inizi sıfırlamak oturumunuzu kapatacaktır. Tekrar giriş yaptıktan sonra, Ayarlar\'dan yeni bir PIN belirleyebilirsiniz.';
+
+  @override
+  String get reset => 'Sıfırla';
+
+  @override
+  String get seconds => 'saniye';
 }

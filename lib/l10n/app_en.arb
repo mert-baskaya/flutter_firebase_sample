@@ -534,5 +534,60 @@
   "lockSettingsDescription": "Lock the app after a period of inactivity. When enabled, you will be asked to enter your PIN or use biometrics to unlock the app.",
   "@lockSettingsDescription": {
     "description": "Lock settings section description"
+  },
+
+  "ok": "OK",
+  "@ok": {
+    "description": "OK button text"
+  },
+
+  "biometricUnavailable": "Biometric Unavailable",
+  "@biometricUnavailable": {
+    "description": "Biometric unavailable dialog title"
+  },
+
+  "biometricSetupInstructions": "Biometric authentication is not available or was not enrolled on this device. Please set up {type} in your device settings first.",
+  "@biometricSetupInstructions": {
+    "description": "Biometric setup instructions dialog message",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+
+  "biometricsNotAvailable": "Not available on this device",
+  "@biometricsNotAvailable": {
+    "description": "Biometrics not available subtitle"
+  },
+
+  "useBiometric": "Use {type}",
+  "@useBiometric": {
+    "description": "Use biometric type label",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+
+  "forgotPin": "Forgot PIN?",
+  "@forgotPin": {
+    "description": "Forgot PIN button and dialog title"
+  },
+
+  "forgotPinMessage": "Resetting your PIN will sign you out. After signing in again, you can set a new PIN from Settings.",
+  "@forgotPinMessage": {
+    "description": "Forgot PIN dialog message"
+  },
+
+  "reset": "Reset",
+  "@reset": {
+    "description": "Reset button text"
+  },
+
+  "seconds": "seconds",
+  "@seconds": {
+    "description": "Seconds unit label"
   }
 }

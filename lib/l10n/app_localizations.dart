@@ -739,6 +739,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Lock the app after a period of inactivity. When enabled, you will be asked to enter your PIN or use biometrics to unlock the app.'**
   String get lockSettingsDescription;
+
+  /// OK button text
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get ok;
+
+  /// Biometric unavailable dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric Unavailable'**
+  String get biometricUnavailable;
+
+  /// Biometric setup instructions dialog message
+  ///
+  /// In en, this message translates to:
+  /// **'Biometric authentication is not available or was not enrolled on this device. Please set up {type} in your device settings first.'**
+  String biometricSetupInstructions(String type);
+
+  /// Biometrics not available subtitle
+  ///
+  /// In en, this message translates to:
+  /// **'Not available on this device'**
+  String get biometricsNotAvailable;
+
+  /// Use biometric type label
+  ///
+  /// In en, this message translates to:
+  /// **'Use {type}'**
+  String useBiometric(String type);
+
+  /// Forgot PIN button and dialog title
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot PIN?'**
+  String get forgotPin;
+
+  /// Forgot PIN dialog message
+  ///
+  /// In en, this message translates to:
+  /// **'Resetting your PIN will sign you out. After signing in again, you can set a new PIN from Settings.'**
+  String get forgotPinMessage;
+
+  /// Reset button text
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get reset;
+
+  /// Seconds unit label
+  ///
+  /// In en, this message translates to:
+  /// **'seconds'**
+  String get seconds;
 }
 
 class _AppLocalizationsDelegate

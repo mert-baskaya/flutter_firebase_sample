@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import '../l10n/app_localizations.dart';
 import '../services/app_lock_service.dart';
+import '../services/auth_service.dart';
 
 class LockScreen extends StatefulWidget {
   final VoidCallback onUnlocked;
@@ -61,6 +63,7 @@ class _LockScreenState extends State<LockScreen> {
 
   Future<void> _verifyPin() async {
     final entered = _enteredPin.join();
+    final l10n = AppLocalizations.of(context)!;
     final stored = await _lockService.pin;
     if (stored == null) return;
 
@@ -71,13 +74,48 @@ class _LockScreenState extends State<LockScreen> {
     } else {
       setState(() {
         _enteredPin.clear();
-        _error = 'Incorrect PIN';
+        _error = l10n.incorrectPin;
       });
     }
   }
 
+  Future<void> _onForgotPin() async {
+    final confirmed = await showCupertinoDialog<bool>(
+      context: context,
+      builder: (ctx) {
+        final l10n = AppLocalizations.of(ctx)!;
+        return CupertinoAlertDialog(
+          title: Text(l10n.forgotPin),
+          content: Text(l10n.forgotPinMessage),
+          actions: [
+            CupertinoDialogAction(
+              isDestructiveAction: true,
+              child: Text(l10n.cancel),
+              onPressed: () => Navigator.pop(ctx, false),
+            ),
+            CupertinoDialogAction(
+              child: Text(l10n.reset),
+              onPressed: () => Navigator.pop(ctx, true),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (confirmed != true) return;
+    if (!mounted) return;
+
+    await _lockService.clearPin();
+    await _lockService.setLockEnabled(false);
+    await _lockService.setBiometricEnabled(false);
+
+    await AuthService().signOut();
+  }
+
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return CupertinoPageScaffold(
       child: SafeArea(
         child: Column(
@@ -89,9 +127,9 @@ class _LockScreenState extends State<LockScreen> {
               color: CupertinoColors.systemBlue,
             ),
             const SizedBox(height: 16),
-            const Text(
-              'Enter PIN',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+            Text(
+              l10n.enterPin,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 32),
             _buildPinDots(),
@@ -105,6 +143,18 @@ class _LockScreenState extends State<LockScreen> {
                 ),
               ),
             ],
+            const SizedBox(height: 20),
+            CupertinoButton(
+              onPressed: _onForgotPin,
+              padding: EdgeInsets.zero,
+              child: Text(
+                l10n.forgotPin,
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: CupertinoColors.systemBlue,
+                ),
+              ),
+            ),
             const Spacer(flex: 1),
             _buildNumpad(),
             const Spacer(flex: 1),

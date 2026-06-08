@@ -332,4 +332,36 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get lockSettingsDescription =>
       'Lock the app after a period of inactivity. When enabled, you will be asked to enter your PIN or use biometrics to unlock the app.';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get biometricUnavailable => 'Biometric Unavailable';
+
+  @override
+  String biometricSetupInstructions(String type) {
+    return 'Biometric authentication is not available or was not enrolled on this device. Please set up $type in your device settings first.';
+  }
+
+  @override
+  String get biometricsNotAvailable => 'Not available on this device';
+
+  @override
+  String useBiometric(String type) {
+    return 'Use $type';
+  }
+
+  @override
+  String get forgotPin => 'Forgot PIN?';
+
+  @override
+  String get forgotPinMessage =>
+      'Resetting your PIN will sign you out. After signing in again, you can set a new PIN from Settings.';
+
+  @override
+  String get reset => 'Reset';
+
+  @override
+  String get seconds => 'seconds';
 }

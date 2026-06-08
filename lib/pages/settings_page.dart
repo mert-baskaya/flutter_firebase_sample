@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart' show defaultTargetPlatform, TargetPlatform;
 import '../l10n/app_localizations.dart';
 import '../services/app_lock_service.dart';
 
@@ -46,26 +47,26 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   Future<void> _toggleLock(bool value) async {
-    if (value && !_hasPin) {
+    if (value) {
       final pin = await _showSetPinDialog();
       if (pin == null) return;
       await _lockService.setPin(pin);
       await _lockService.setLockEnabled(true);
-    } else if (!value) {
-      await _lockService.setLockEnabled(false);
     } else {
-      await _lockService.setLockEnabled(true);
+      await _lockService.clearPin();
+      await _lockService.setLockEnabled(false);
     }
     await _loadSettings();
     widget.onLockSettingsChanged?.call();
   }
 
   Future<void> _changePin() async {
+    final l10n = AppLocalizations.of(context)!;
     final pin = await _showSetPinDialog();
     if (pin != null) {
       await _lockService.setPin(pin);
       if (mounted) {
-        _showAlert('PIN updated');
+        _showAlert(l10n.pinUpdated);
       }
     }
   }
@@ -82,14 +83,14 @@ class _SettingsPageState extends State<SettingsPage> {
         return StatefulBuilder(
           builder: (context, setDialogState) {
             return CupertinoAlertDialog(
-              title: Text(_hasPin ? 'Change PIN' : 'Set PIN'),
+              title: Text(_hasPin ? l10n.changePin : l10n.setPin),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const SizedBox(height: 8),
                   CupertinoTextField(
                     controller: pinController,
-                    placeholder: 'Enter 4-digit PIN',
+                    placeholder: l10n.enter4DigitPin,
                     obscureText: true,
                     keyboardType: TextInputType.number,
                     maxLength: 4,
@@ -119,7 +120,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   onPressed: () {
                     if (pin.length != 4) {
                       setDialogState(() {
-                        error = 'PIN must be 4 digits';
+                        error = l10n.pinMustBe4Digits;
                       });
                       return;
                     }
@@ -137,7 +138,29 @@ class _SettingsPageState extends State<SettingsPage> {
   Future<void> _toggleBiometric(bool value) async {
     if (value) {
       final success = await _lockService.authenticateWithBiometrics();
-      if (!success) return;
+      if (!success) {
+        if (mounted) {
+          showCupertinoDialog(
+            context: context,
+            builder: (ctx) {
+              final l10n = AppLocalizations.of(ctx)!;
+              return CupertinoAlertDialog(
+                title: Text(l10n.biometricUnavailable),
+                content: Text(
+                  l10n.biometricSetupInstructions(_biometricTypeName()),
+                ),
+                actions: [
+                  CupertinoDialogAction(
+                    child: Text(l10n.ok),
+                    onPressed: () => Navigator.pop(ctx),
+                  ),
+                ],
+              );
+            },
+          );
+        }
+        return;
+      }
     }
     await _lockService.setBiometricEnabled(value);
     setState(() => _biometricEnabled = value);
@@ -149,7 +172,7 @@ class _SettingsPageState extends State<SettingsPage> {
     final selected = await showCupertinoModalPopup<int>(
       context: context,
       builder: (context) => CupertinoActionSheet(
-        title: const Text('Lock Timeout'),
+        title: Text(l10n.lockTimeout),
         actions: [
           for (final option in AppLockService.timeoutOptions)
             CupertinoActionSheetAction(
@@ -172,19 +195,32 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   String _timeoutLabel(int seconds) {
+    final l10n = AppLocalizations.of(context)!;
     switch (seconds) {
       case 0:
-        return 'Immediate';
+        return l10n.lockTimeoutImmediate;
       case 30:
-        return '30 seconds';
+        return l10n.lockTimeout30s;
       case 60:
-        return '1 minute';
+        return l10n.lockTimeout1min;
       case 300:
-        return '5 minutes';
+        return l10n.lockTimeout5min;
       case 900:
-        return '15 minutes';
+        return l10n.lockTimeout15min;
       default:
-        return '$seconds seconds';
+        return '$seconds ${l10n.seconds}';
+    }
+  }
+
+  String _biometricTypeName() {
+    switch (defaultTargetPlatform) {
+      case TargetPlatform.android:
+        return 'Fingerprint';
+      case TargetPlatform.iOS:
+      case TargetPlatform.macOS:
+        return 'Face ID / Touch ID';
+      default:
+        return 'Biometrics';
     }
   }
 
@@ -241,8 +277,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 _buildSwitchRow(
                   icon: CupertinoIcons.lock_fill,
                   iconColor: CupertinoColors.systemBlue,
-                  title: 'App Lock',
-                  subtitle: 'Require PIN to unlock the app',
+                  title: l10n.appLock,
+                  subtitle: l10n.appLockDescription,
                   value: _lockEnabled,
                   onChanged: _toggleLock,
                 ),
@@ -255,7 +291,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   _buildTapRow(
                     icon: CupertinoIcons.timer,
                     iconColor: CupertinoColors.systemOrange,
-                    title: 'Lock Timeout',
+                    title: l10n.lockTimeout,
                     subtitle: _timeoutLabel(_timeout),
                     onTap: _showTimeoutPicker,
                   ),
@@ -263,18 +299,18 @@ class _SettingsPageState extends State<SettingsPage> {
                   _buildTapRow(
                     icon: CupertinoIcons.lock_fill,
                     iconColor: CupertinoColors.systemPurple,
-                    title: 'Change PIN',
-                    subtitle: 'Update your 4-digit PIN',
+                    title: l10n.changePin,
+                    subtitle: l10n.changePinDescription,
                     onTap: _changePin,
                   ),
                   _buildDivider(),
                   _buildSwitchRow(
                     icon: CupertinoIcons.hand_raised_fill,
                     iconColor: CupertinoColors.systemGreen,
-                    title: 'Biometrics',
+                    title: l10n.biometrics,
                     subtitle: _biometricAvailable
-                        ? 'Use Face ID / Touch ID'
-                        : 'Not available on this device',
+                        ? l10n.useBiometric(_biometricTypeName())
+                        : l10n.biometricsNotAvailable,
                     value: _biometricEnabled,
                     onChanged: _biometricAvailable ? _toggleBiometric : null,
                   ),
@@ -285,9 +321,7 @@ class _SettingsPageState extends State<SettingsPage> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                'Lock the app after a period of inactivity. '
-                'When enabled, you will be asked to enter your PIN '
-                'or use biometrics to unlock the app.',
+                l10n.lockSettingsDescription,
                 style: const TextStyle(
                   fontSize: 13,
                   color: CupertinoColors.secondaryLabel,

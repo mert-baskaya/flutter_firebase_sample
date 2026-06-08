@@ -60,6 +60,11 @@ class AppLockService {
     await p.setString(_pinKey, value);
   }
 
+  Future<void> clearPin() async {
+    final p = await prefs;
+    await p.remove(_pinKey);
+  }
+
   Future<void> setTimeoutSeconds(int value) async {
     final p = await prefs;
     await p.setInt(_timeoutKey, value);
@@ -102,8 +107,10 @@ class AppLockService {
 
   Future<bool> isBiometricAvailable() async {
     try {
-      return await _localAuth.canCheckBiometrics ||
-          await _localAuth.isDeviceSupported();
+      final canCheck = await _localAuth.canCheckBiometrics;
+      if (!canCheck) return false;
+      final biometrics = await _localAuth.getAvailableBiometrics();
+      return biometrics.isNotEmpty;
     } catch (_) {
       return false;
     }

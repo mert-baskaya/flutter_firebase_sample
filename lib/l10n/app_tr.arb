@@ -534,5 +534,60 @@
   "lockSettingsDescription": "Uygulamayı belirli bir süre işlem yapılmadığında kilitleyin. Etkinleştirildiğinde, uygulamayı açmak için PIN girmeniz veya biyometri kullanmanız istenecektir.",
   "@lockSettingsDescription": {
     "description": "Lock settings section description"
+  },
+
+  "ok": "Tamam",
+  "@ok": {
+    "description": "OK button text"
+  },
+
+  "biometricUnavailable": "Biyometri Kullanılamıyor",
+  "@biometricUnavailable": {
+    "description": "Biometric unavailable dialog title"
+  },
+
+  "biometricSetupInstructions": "Biyometrik kimlik doğrulama kullanılamıyor veya bu cihazda kayıtlı değil. Lütfen cihaz ayarlarınızdan {type} özelliğini kurun.",
+  "@biometricSetupInstructions": {
+    "description": "Biometric setup instructions dialog message",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+
+  "biometricsNotAvailable": "Bu cihazda kullanılamıyor",
+  "@biometricsNotAvailable": {
+    "description": "Biometrics not available subtitle"
+  },
+
+  "useBiometric": "{type} kullan",
+  "@useBiometric": {
+    "description": "Use biometric type label",
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+
+  "forgotPin": "PIN'imi Unuttum?",
+  "@forgotPin": {
+    "description": "Forgot PIN button and dialog title"
+  },
+
+  "forgotPinMessage": "PIN'inizi sıfırlamak oturumunuzu kapatacaktır. Tekrar giriş yaptıktan sonra, Ayarlar'dan yeni bir PIN belirleyebilirsiniz.",
+  "@forgotPinMessage": {
+    "description": "Forgot PIN dialog message"
+  },
+
+  "reset": "Sıfırla",
+  "@reset": {
+    "description": "Reset button text"
+  },
+
+  "seconds": "saniye",
+  "@seconds": {
+    "description": "Seconds unit label"
   }
 }
