@@ -23,7 +23,7 @@ class AppLockService {
 
   final LocalAuthentication _localAuth = LocalAuthentication();
   SharedPreferences? _prefs;
-  DateTime? _backgroundTime;
+  static DateTime? _backgroundTime;
 
   Future<SharedPreferences> get prefs async {
     _prefs ??= await SharedPreferences.getInstance();
@@ -102,6 +102,10 @@ class AppLockService {
   }
 
   void clearBackgroundTime() {
+    _backgroundTime = null;
+  }
+
+  static void clearBackgroundTimeForAll() {
     _backgroundTime = null;
   }
 

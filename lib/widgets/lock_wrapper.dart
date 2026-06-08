@@ -15,6 +15,7 @@ class _LockWrapperState extends State<LockWrapper> with WidgetsBindingObserver {
   final AppLockService _lockService = AppLockService();
   bool _isLocked = false;
   bool _initialized = false;
+  bool _pendingResumeCheck = false;
 
   @override
   void initState() {
@@ -47,7 +48,13 @@ class _LockWrapperState extends State<LockWrapper> with WidgetsBindingObserver {
     if (state == AppLifecycleState.paused) {
       _lockService.recordBackgroundTime();
     } else if (state == AppLifecycleState.resumed) {
-      _checkIfShouldLock();
+      if (!_pendingResumeCheck) {
+        _pendingResumeCheck = true;
+        Future.delayed(const Duration(milliseconds: 300), () {
+          _pendingResumeCheck = false;
+          _checkIfShouldLock();
+        });
+      }
     }
   }
 

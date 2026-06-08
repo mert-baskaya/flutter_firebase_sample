@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
+import '../services/app_lock_service.dart';
 import '../services/auth_service.dart';
 import '../services/storage_service.dart';
 import '../services/user_profile_service.dart';
@@ -76,6 +77,8 @@ class _ProfilePageState extends State<ProfilePage> {
         maxHeight: 512,
         imageQuality: 75,
       );
+
+      AppLockService.clearBackgroundTimeForAll();
 
       if (pickedFile == null) return;
 
