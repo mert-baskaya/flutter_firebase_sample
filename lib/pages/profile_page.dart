@@ -367,6 +367,18 @@ class _ProfilePageState extends State<ProfilePage> {
     );
   }
 
+  String _localizedGender(String gender) {
+    final l10n = AppLocalizations.of(context)!;
+    switch (gender) {
+      case 'Male':
+        return l10n.male;
+      case 'Female':
+        return l10n.female;
+      default:
+        return gender;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -546,7 +558,9 @@ class _ProfilePageState extends State<ProfilePage> {
                     icon: CupertinoIcons.person_fill,
                     iconColor: CupertinoColors.systemPurple,
                     title: l10n.gender,
-                    subtitle: profile.gender ?? l10n.notSet,
+                    subtitle: profile.gender != null
+                        ? _localizedGender(profile.gender!)
+                        : l10n.notSet,
                   ),
                 ],
               ),
