@@ -132,10 +132,8 @@ class AppLockService {
     try {
       return await _localAuth.authenticate(
         localizedReason: 'Authenticate to unlock the app',
-        options: const AuthenticationOptions(
-          biometricOnly: true,
-          stickyAuth: true,
-        ),
+        biometricOnly: true,
+        persistAcrossBackgrounding: true,
       );
     } catch (_) {
       return false;

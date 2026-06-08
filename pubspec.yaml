@@ -38,10 +38,10 @@ dependencies:
   firebase_storage: ^13.2.0
   cloud_firestore: ^6.2.0
   google_sign_in: ^7.2.0
-  sign_in_with_apple: ^7.0.1 # Required for iOS/macOS
+  sign_in_with_apple: ^8.1.0 # Required for iOS/macOS
   image_picker: ^1.0.7
   shared_preferences: ^2.2.2
-  local_auth: ^2.1.7
+  local_auth: ^3.0.1
   provider: ^6.1.1
 
   # The following adds the Cupertino Icons font to your application.
