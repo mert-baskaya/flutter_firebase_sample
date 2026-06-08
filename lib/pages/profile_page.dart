@@ -261,11 +261,11 @@ class _ProfilePageState extends State<ProfilePage> {
                       const SizedBox(height: 12),
                       CupertinoSlidingSegmentedControl<String>(
                         groupValue: gender,
-                        children: const {
-                          'Male': Text('Male', style: TextStyle(fontSize: 14)),
+                        children: {
+                          'Male': Text(l10n.male, style: const TextStyle(fontSize: 14)),
                           'Female': Text(
-                            'Female',
-                            style: TextStyle(fontSize: 14),
+                            l10n.female,
+                            style: const TextStyle(fontSize: 14),
                           ),
                         },
                         onValueChanged: (value) {
